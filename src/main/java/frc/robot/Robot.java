@@ -45,9 +45,8 @@ public class Robot extends TimedRobot {
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
     if (RobotContainer.motorSwitch.switchZero.get()) {
-      RobotContainer.M_MOTOR.setSpeed(0.5);
-    } else {
-      RobotContainer.M_MOTOR.setSpeed(0);
+      // RobotContainer.gyroOne.robotGyro.reset();
+      System.out.println(RobotContainer.gyroOne.robotGyro.getAngle());
     }
   }
 

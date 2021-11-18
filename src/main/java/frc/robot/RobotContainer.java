@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.robotCommand;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.gyro;
 import frc.robot.subsystems.limitSwitch;
 import frc.robot.subsystems.motor;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -30,6 +31,7 @@ public class RobotContainer {
   public static final robotCommand M_COMMAND = new robotCommand(M_MOTOR);
 
   public static final limitSwitch motorSwitch = new limitSwitch();
+  public static final gyro gyroOne = new gyro();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
