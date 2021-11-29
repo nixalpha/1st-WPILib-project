@@ -45,12 +45,17 @@ public class Robot extends TimedRobot {
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
-    System.out.println(RobotContainer.gyroOne.robotGyro.getAngle());
+    // System.out.println(RobotContainer.gyroOne.robotGyro.getAngle());
     
-    Timer.delay(0.1);
+    // Timer.delay(0.1);
     
     if (RobotContainer.motorSwitch.switchZero.get()) {
-      RobotContainer.gyroOne.robotGyro.reset();
+      // RobotContainer.gyroOne.robotGyro.reset();
+      RobotContainer.M_MOTOR.setSpeed(0.5); 
+      RobotContainer.falcons.setSpeed(0.5);
+    } else {
+      RobotContainer.M_MOTOR.setSpeed(0); 
+      RobotContainer.falcons.setSpeed(0);
     }
   }
 
